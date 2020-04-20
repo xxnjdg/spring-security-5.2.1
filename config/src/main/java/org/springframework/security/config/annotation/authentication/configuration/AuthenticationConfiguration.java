@@ -77,6 +77,7 @@ public class AuthenticationConfiguration {
 	public AuthenticationManagerBuilder authenticationManagerBuilder(
 			ObjectPostProcessor<Object> objectPostProcessor, ApplicationContext context) {
 		LazyPasswordEncoder defaultPasswordEncoder = new LazyPasswordEncoder(context);
+		//org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration.authenticationEventPublisher
 		AuthenticationEventPublisher authenticationEventPublisher = getBeanOrNull(context, AuthenticationEventPublisher.class);
 
 		DefaultPasswordEncoderAuthenticationManagerBuilder result = new DefaultPasswordEncoderAuthenticationManagerBuilder(objectPostProcessor, defaultPasswordEncoder);

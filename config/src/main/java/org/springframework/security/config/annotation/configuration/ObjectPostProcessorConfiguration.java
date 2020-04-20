@@ -32,6 +32,8 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
  *
  * @author Rob Winch
  * @since 3.2
+ *
+ * ObjectPostProcessor<Object> been
  */
 @Configuration(proxyBeanMethods = false)
 public class ObjectPostProcessorConfiguration {
